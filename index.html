@@ -9,76 +9,73 @@
 
     <style>
         /* Estilos Visuais Atualizados */
-        body {
-            margin: 0; /* Remove as bordas brancas padrão do navegador */
-            padding: 0;
-            min-height: 100vh; /* Garante que o fundo cresça se você tiver muitos botões */
-            
-            /* O fundo que você escolheu */
-            background: radial-gradient(circle at center, #ff8c00 0%, #d84315 100%);
-            background-attachment: fixed; /* Opcional: faz o fundo ficar parado enquanto você rola a página */
-            
-            /* Ajustes para o conteúdo continuar centralizado */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h1 { color: #1c1e21; margin-bottom: 30px; }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            width: 100%;
-            max-width: 900px;
-        }
-
-        /* Estilo dos Botões (Cards) */
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: #4b4f56;
-            text-align: center;
-            font-weight: 600;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-            transition: all 0.2s ease-in-out;
-            cursor: pointer;
-            border: 2px solid transparent; /* Para o efeito de hover */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Efeito ao passar o mouse */
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            color: #1877f2; /* Cor azul genérica de link */
-            border-color: #e7f3ff;
-        }
-
-        /* ESTILO DOS ÍCONES (Font Awesome) */
-        .icon { 
-            font-size: 45px; /* Tamanho do ícone */
-            margin-bottom: 15px; 
-            transition: transform 0.2s;
-        }
-
-        .card:hover .icon {
-            transform: scale(1.1); /* Ícone cresce um pouco no hover */
-        }
-
-        /* Cores específicas para cada marca (Opcional, mas fica lindo) */
-        .icon-whatsapp { color: #25D366; }
-        .icon-google { color: #4285F4; }
-        .icon-youtube { color: #FF0000; }
-        .icon-trello { color: #0079BF; }
-        .icon-github { color: #333; }
-        .icon-generic { color: #7f8c8d; } /* Para links gerais */
-
+       body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        /* Gradiente baseado no banner do site */
+        background: radial-gradient(circle at center, #ff8c00 0%, #b33612 100%);
+        background-attachment: fixed;
+        font-family: 'Segoe UI', Roboto, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white; /* Texto do título em branco para contraste */
+    }
+    
+    h1 {
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.3); /* Sombra para ler melhor no laranja */
+        margin-top: 20px;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 25px;
+        width: 90%;
+        max-width: 1000px;
+        padding: 40px 0;
+    }
+    
+    /* ESTILO DOS BOTÕES (CARDS) */
+    .card {
+        background: white; /* Fundo branco como no site original */
+        padding: 30px 20px;
+        border-radius: 15px;
+        text-decoration: none;
+        color: #d84315; /* Texto em laranja escuro para contraste no branco */
+        text-align: center;
+        font-weight: bold;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        transition: all 0.3s ease;
+        border: 3px solid transparent; /* Reserva espaço para a borda no hover */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* EFEITO AO PASSAR O MOUSE */
+    .card:hover {
+        transform: translateY(-8px);
+        border-color: #ffffff; /* Borda branca */
+        background: #1c1e21; /* Inverte para um tom escuro como os menus do site */
+        color: white;
+    }
+    
+    /* ÍCONES */
+    .icon-container {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    
+    .icon-container i, .icon-container img {
+        font-size: 45px;
+        height: 45px;
+        /* Se for ícone do FontAwesome, ele herda a cor do card automaticamente */
+    }
     </style>
 </head>
 <body>
