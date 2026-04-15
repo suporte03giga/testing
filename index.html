@@ -10,13 +10,18 @@
     <style>
         /* Estilos Visuais Atualizados */
         body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background-color: radial-gradient(circle at center, #ff8c00 0%, #d84315 100%);
+            margin: 0; /* Remove as bordas brancas padrão do navegador */
+            padding: 0;
+            min-height: 100vh; /* Garante que o fundo cresça se você tiver muitos botões */
+            
+            /* O fundo que você escolheu */
+            background: radial-gradient(circle at center, #ff8c00 0%, #d84315 100%);
+            background-attachment: fixed; /* Opcional: faz o fundo ficar parado enquanto você rola a página */
+            
+            /* Ajustes para o conteúdo continuar centralizado */
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px;
-            margin: 0;
         }
 
         h1 { color: #1c1e21; margin-bottom: 30px; }
