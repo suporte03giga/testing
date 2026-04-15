@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Links Profissional</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Estilos Visuais Atualizados */
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: #f0f2f5; /* Um cinza levemente diferente */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            margin: 0;
+        }
+
+        h1 { color: #1c1e21; margin-bottom: 30px; }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        /* Estilo dos Botões (Cards) */
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #4b4f56;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            border: 2px solid transparent; /* Para o efeito de hover */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Efeito ao passar o mouse */
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            color: #1877f2; /* Cor azul genérica de link */
+            border-color: #e7f3ff;
+        }
+
+        /* ESTILO DOS ÍCONES (Font Awesome) */
+        .icon { 
+            font-size: 45px; /* Tamanho do ícone */
+            margin-bottom: 15px; 
+            transition: transform 0.2s;
+        }
+
+        .card:hover .icon {
+            transform: scale(1.1); /* Ícone cresce um pouco no hover */
+        }
+
+        /* Cores específicas para cada marca (Opcional, mas fica lindo) */
+        .icon-whatsapp { color: #25D366; }
+        .icon-google { color: #4285F4; }
+        .icon-youtube { color: #FF0000; }
+        .icon-trello { color: #0079BF; }
+        .icon-github { color: #333; }
+        .icon-generic { color: #7f8c8d; } /* Para links gerais */
+
+    </style>
+</head>
+<body>
+
+    <h1>🚀 Central de Ferramentas</h1>
+
+    <div class="grid-container">
+        
+        <a href="https://mk.gigams.com.br/mk" target="_blank" class="card">
+            <img src="mk.png" alt="MK Solutions" style="width: 50px; height: 50px; margin-bottom: 15px;">
+            MK Solutions
+        </a>
+
+        <a href="https://10.3.1.15:8081/entrar" target="_blank" class="card">
+            <img src="made.png" alt="MK Solutions" style="width: 50px; height: 50px; margin-bottom: 15px;">
+            Made 4 Graph
+        </a>
+
+        <a href="https://giganetms.newave.one/#/panel" target="_blank" class="card">
+            <img src="one.png" alt="MK Solutions" style="width: 125px; height: 50px; margin-bottom: 15px;">
+            Newave
+        </a>
+
+        <a href="https://chatgpt.com/" target="_blank" class="card">
+            <img src="gpt.png" alt="MK Solutions" style="width: 100px; height: 50px; margin-bottom: 15px;">
+            Chat GPT
+        </a>
+
+        <a href="https://downdetector.com.br/" target="_blank" class="card">
+            <img src="dow.png" alt="MK Solutions" style="width: 50px; height: 50px; margin-bottom: 15px;">
+            DOWNDETECTOR
+        </a>
+
+        <a href="https://web.whatsapp.com/" target="_blank" class="card">
+            <img src="whats.png" alt="MK Solutions" style="width: 50px; height: 50px; margin-bottom: 15px;">
+            Whatsapp
+        </a>
+
+        <a href="https://teams.live.com/" target="_blank" class="card">
+            <img src="teams.png" alt="MK Solutions" style="width: 50px; height: 50px; margin-bottom: 15px;">
+            Teams
+        </a>
+
+        <a href="https://extranet.oletelecom.com.br/login.php?retorno=/" target="_blank" class="card">
+            <img src="ole.png" alt="MK Solutions" style="width: 100px; height: 50px; margin-bottom: 15px;">
+            Olé TV
+        </a>
+
+        <a href="https://docs.google.com/spreadsheets/d/1PZzEqx6E8VCxQgoVDQJRCM0CoolHWzNGGee0AzcfCcc/edit?gid=0#gid=0" target="_blank" class="card">
+            <img src="ramais.png" alt="MK Solutions" style="width: 50px; height: 50px; margin-bottom: 15px;">
+            RAMAIS
+        </a>
+
+        <a href="https://docs.google.com/spreadsheets/d/1oIu-h83sgEKdUXHLQThtH9ijpuzCN9Z1aW4Hp-Kxn_A/edit?gid=0#gid=0" target="_blank" class="card">
+            <img src="fds.png" alt="MK Solutions" style="width: 50px; height: 50px; margin-bottom: 15px;">
+            Escala FDS
+        </a>
+
+        <a href="https://docs.google.com/spreadsheets/d/1YEjCPd7vIHRE5oPAwqrBmUOg7F0zfjfLHh7UN6pP-Lk/edit?gid=1226572451#gid=1226572451" target="_blank" class="card">
+            <img src="tec.png" alt="MK Solutions" style="width: 50px; height: 50px; margin-bottom: 15px;">
+            Controle Técnico
+        </a>
+
+    </div>
+
+</body>
+</html>
