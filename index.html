@@ -75,6 +75,10 @@
         font-size: 45px;
         height: 45px;
         /* Se for ícone do FontAwesome, ele herda a cor do card automaticamente */
+        transition: filter 0.3s ease;
+    }
+    .card:hover .icon-container img {
+        filter: brightness(0) invert(1);
     }
     </style>
 </head>
