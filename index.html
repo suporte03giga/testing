@@ -108,6 +108,46 @@
         .card:hover .icon-container i {
             color: white !important;
         }
+        /* O Fundo do Modal (Preto com transparência) */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        /* A "Caixa" onde o PDF vai aparecer */
+        .modal-conteudo {
+            position: relative;
+            margin: 2% auto;
+            width: 80%;
+            height: 90%;
+            background-color: white;
+            border-radius: 10px;
+        }
+        
+        /* O botão de fechar (X) */
+        .fechar {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 35px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        /* O Iframe em si */
+        #pdfFrame {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
 
     </style>
 </head>
@@ -182,7 +222,7 @@
             </div>
             Roteiro Giganet
         </a>
-        <a href="extras/gigatvcliente.pdf" target="_blank" class="card">
+        <a href="javascript:void(0)" class="card" onclick="abrirPDF('extras/gigatvcliente.pdf')">
             <div class="icon-container">
                 <i class="fas fa-file-pdf"></i>
             </div>
@@ -190,6 +230,22 @@
         </a>
 
     </div>
-
+    <div id="meuModal" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharPDF()">&times;</span>
+            <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+    <script>
+        function abrirPDF(caminho) {
+            document.getElementById('meuModal').style.display = "block";
+            document.getElementById('pdfFrame').src = caminho;
+        }
+    
+        function fecharPDF() {
+            document.getElementById('meuModal').style.display = "none";
+            document.getElementById('pdfFrame').src = ""; // Limpa para economizar memória
+        }
+    </script>
 </body>
 </html>
