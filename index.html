@@ -49,11 +49,61 @@
         /* GRID DE BOTÕES */
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 25px;
-            width: 90%;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Diminuímos o mínimo para caberem mais */
+            gap: 15px;
+            width: 95%;
+            max-width: 1200px; /* Aumentamos o limite da largura */
             padding: 20px 0;
+        }
+        /* Estilo para os Títulos das Seções */
+        .secao-titulo {
+            width: 100%;
+            max-width: 1200px;
+            text-align: left;
+            margin: 40px 0 10px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+        }
+        /* Container do Dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Conteúdo que aparece (escondido por padrão) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 10;
+            border-radius: 10px;
+            overflow: hidden;
+            top: 100%; /* Aparece logo abaixo do botão */
+        }
+
+        /* Links dentro do dropdown */
+        .dropdown-content a {
+            color: #d84315;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #1c1e21;
+            color: white;
+        }
+
+        /* Mostrar ao passar o mouse */
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
 
         /* ESTILO DOS CARDS */
@@ -108,6 +158,12 @@
         .card:hover .icon-container i {
             color: white !important;
         }
+
+        /* EXCEÇÃO: Se a imagem tiver esta classe, ela mantém as cores originais */
+        .card:hover .icon-container img.preservar-cor {
+            filter: none !important;
+        }
+
         /* O Fundo do Modal (Preto com transparência) */
         .modal {
             display: none; /* Escondido por padrão */
@@ -158,90 +214,76 @@
         <img src="imagens/gigabot02.png" alt="gigabot" style="width: 150px; height: auto;">
     </div>
 
+    <div class="secao-titulo">Sistemas e Comunicação</div>
     <div class="grid-container">
-        
         <a href="https://mk.gigams.com.br/mk" target="_blank" class="card">
-            <img src="imagens/mk.png" alt="MK Solutions" style="width: 50px; height: 50px; margin-bottom: 15px;">
+            <div class="icon-container"><img src="imagens/mk.png" class="preservar-cor"></div>
             MK Solutions
         </a>
-
-        <a href="https://10.3.1.15:8081/entrar" target="_blank" class="card">
-            <img src="imagens/made.png" alt="Made 4 Graph" style="width: 50px; height: 50px; margin-bottom: 15px;">
-            Made 4 Graph
-        </a>
-
         <a href="https://giganetms.newave.one/#/panel" target="_blank" class="card">
-            <img src="imagens/one.png" alt="Newave" style="width: 125px; height: 50px; margin-bottom: 15px;">
+            <div class="icon-container"><img src="imagens/one.png" class="preservar-cor"></div>
             Newave
         </a>
-
-        <a href="https://downdetector.com.br/" target="_blank" class="card">
-            <img src="imagens/dow.png" alt="DOWNDETECTOR" style="width: 50px; height: 50px; margin-bottom: 15px;">
-            DOWNDETECTOR
+        <a href="https://10.3.1.15:8081/entrar" target="_blank" class="card">
+            <div class="icon-container"><img src="imagens/made.png" class="preservar-cor"></div>
+            Made 4 Graph
         </a>
-
         <a href="https://web.whatsapp.com/" target="_blank" class="card">
-            <img src="imagens/whats.png" alt="Whatsapp" style="width: 50px; height: 50px; margin-bottom: 15px;">
+            <div class="icon-container"><img src="imagens/whats.png" class="preservar-cor"></div>
             Whatsapp
         </a>
-
         <a href="https://teams.live.com/" target="_blank" class="card">
-            <img src="imagens/teams.png" alt="Teams" style="width: 50px; height: 50px; margin-bottom: 15px;">
+            <div class="icon-container"><img src="imagens/teams.png" class="preservar-cor"></div>
             Teams
         </a>
+    </div>
 
+    <div class="secao-titulo">Olé TV</div>
+    <div class="grid-container">
         <a href="https://extranet.oletelecom.com.br/login.php?retorno=/" target="_blank" class="card">
-            <img src="imagens/ole.png" alt="Olé TV" style="width: 100px; height: 50px; margin-bottom: 15px;">
+            <div class="icon-container"><img src="imagens/ole.png" class="preservar-cor"></div>
             Olé TV
         </a>
-
-        <a href="https://docs.google.com/spreadsheets/d/1PZzEqx6E8VCxQgoVDQJRCM0CoolHWzNGGee0AzcfCcc/edit?gid=0#gid=0" target="_blank" class="card">
-            <div class="icon-container">
-                <img src="imagens/ramais.png" alt="RAMAIS">
-            </div>
-            RAMAIS
-        </a>
-
-        <a href="https://docs.google.com/spreadsheets/d/1oIu-h83sgEKdUXHLQThtH9ijpuzCN9Z1aW4Hp-Kxn_A/edit?gid=0#gid=0" target="_blank" class="card">
-            <div class="icon-container">
-                <img src="imagens/fds.png" alt="Escala FDS">
-            </div>
-            Escala FDS
-        </a>
-
-        <a href="javascript:void(0)" class="card" onclick="abrirPDF('https://docs.google.com/spreadsheets/d/1YEjCPd7vIHRE5oPAwqrBmUOg7F0zfjfLHh7UN6pP-Lk/edit?gid=1226572451#gid=1226572451')">
-            <div class="icon-container">
-                <img src="imagens/tec.png" alt="Controle Técnico">
-            </div>
-            Controle Técnico
-        </a>
-
-        <a href="https://sites.google.com/view/roteirogiganet/planos-e-aplicativos?authuser=0" target="_blank" class="card">
-            <div class="icon-container">
-                <img src="imagens/info.png" alt="Roteiro Giganet">
-            </div>
-            Roteiro Giganet
-        </a>
-        
         <a href="javascript:void(0)" class="card" onclick="abrirPDF('extras/oletvativacao.pdf')">
-            <div class="icon-container">
-                <img src="imagens/cadole.png" alt="Ativação - Olé TV">
-            </div>
+            <div class="icon-container"><img src="imagens/cadole.png"></div>
             Ativação - Olé TV
         </a>
         <a href="javascript:void(0)" class="card" onclick="abrirPDF('extras/gigatvcliente.pdf')">
-            <div class="icon-container">
-                <img src="imagens/instruole.png" alt="Giga TV - Ativ. Cliente">
-            </div>
+            <div class="icon-container"><img src="imagens/instruole.png"></div>
             Giga TV - Ativ. Cliente
         </a>
+    </div>
+
+    <div class="secao-titulo">Suporte Técnico</div>
+    <div class="grid-container">
+        <a href="https://downdetector.com.br/" target="_blank" class="card">
+            <div class="icon-container"><img src="imagens/dow.png" class="preservar-cor"></div>
+            DOWNDETECTOR
+        </a>
         <a href="javascript:void(0)" class="card" onclick="abrirPDF('extras/configroter.pdf')">
-            <div class="icon-container">
-                <img src="imagens/configroter.png" alt="Giga TV - Ativ. Cliente">
-            </div>
+            <div class="icon-container"><img src="imagens/configroter.png"></div>
             Configuração dos Roteadores
         </a>
+    </div>
 
+    <div class="secao-titulo">Outros Acessos</div>
+    <div class="grid-container">
+        <a href="https://docs.google.com/spreadsheets/d/1PZzEqx6E8VCxQgoVDQJRCM0CoolHWzNGGee0AzcfCcc/edit?gid=0#gid=0" target="_blank" class="card">
+            <div class="icon-container"><img src="imagens/ramais.png"></div>
+            RAMAIS
+        </a>
+        <a href="https://docs.google.com/spreadsheets/d/1oIu-h83sgEKdUXHLQThtH9ijpuzCN9Z1aW4Hp-Kxn_A/edit?gid=0#gid=0" target="_blank" class="card">
+            <div class="icon-container"><img src="imagens/fds.png"></div>
+            Escala FDS
+        </a>
+        <a href="javascript:void(0)" class="card" onclick="abrirPDF('https://docs.google.com/spreadsheets/d/1YEjCPd7vIHRE5oPAwqrBmUOg7F0zfjfLHh7UN6pP-Lk/edit?gid=1226572451#gid=1226572451')">
+            <div class="icon-container"><img src="imagens/tec.png"></div>
+            Controle Técnico
+        </a>
+        <a href="https://sites.google.com/view/roteirogiganet/planos-e-aplicativos?authuser=0" target="_blank" class="card">
+            <div class="icon-container"><img src="imagens/info.png"></div>
+            Roteiro Giganet
+        </a>
     </div>
     
     <div id="meuModal" class="modal">
